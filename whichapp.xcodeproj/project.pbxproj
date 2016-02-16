@@ -17,7 +17,7 @@
 		8DD76F8B0486A9BA00D96B5E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
-			dstPath = /usr/share/man/man1/;
+			dstPath = /share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 				8DD76F8C0486A9BA00D96B5E /* whichapp.1 in CopyFiles */,
@@ -177,7 +177,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INSTALL_PATH = "$(HOME)/bin";
+				INSTALL_PATH = /bin;
 				PREBINDING = NO;
 				PRODUCT_NAME = whichapp;
 			};
@@ -236,7 +236,7 @@
 				2C4949AB0946E31C008820F6 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 		2C4949AC0946E31C008820F6 /* Build configuration list for PBXProject "whichapp" */ = {
 			isa = XCConfigurationList;
@@ -246,7 +246,7 @@
 				2C4949AF0946E31C008820F6 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
