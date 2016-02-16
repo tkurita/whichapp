@@ -14,13 +14,13 @@ void showHelp() {
 	usage();
 	printf("\nlocate an application with given infomation.\n");
 	printf("The application is specified with following parameters.\n\n");
-	printf("File Name -- File name of application. The extention is required.\n");
-	printf("Creator Type -- The value of CFBundleSignagure of an application bundle.\n\n");
+	printf("File Name         -- File name of application. The extention is required.\n");
+	printf("Creator Type      -- The value of CFBundleSignagure of an application bundle.\n");
 	printf("Bundle Identifier -- The value of CFBundleIdentifier of an application bundle.\n");
 }
 
 void showVersion() {
-	printf("whichapp 1.0 copyright 2005, Tetsuro KURITA\n");
+	printf("whichapp 1.0.1 copyright 2005-2016, Tetsuro KURITA\n");
 }
 
 int main (int argc, char * const argv[]) {
@@ -41,6 +41,12 @@ int main (int argc, char * const argv[]) {
 	
 	int c;
 	CFStringRef theCreator;
+	
+	if (argc <= 1) {
+		printf("No arguments.\n");
+		showHelp();
+		return 1;
+	}
 	
 	while(1){
 		c = getopt_long(argc, argv, "t:i:vh",long_options, &option_index);
@@ -83,7 +89,7 @@ int main (int argc, char * const argv[]) {
 	OSStatus resultStatus = LSFindApplicationForInfo(inCreator,inBundleID,inName,&outAppRef,&outAppURL);
 
 	if (resultStatus != 0) {
-		printf("The application is fot found. result status : %i\n",resultStatus);
+		printf("The application is fot found. result status : %d\n",(int)resultStatus);
 		exit(1);
 	}
 	

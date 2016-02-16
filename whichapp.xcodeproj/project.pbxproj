@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,30 +12,6 @@
 		8DD76F890486A9BA00D96B5E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097DBE83FE8419DDC02AAC07 /* CoreServices.framework */; };
 		8DD76F8C0486A9BA00D96B5E /* whichapp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E9D0290929804C91782 /* whichapp.1 */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		014CEA4C0018CE3E11CA2923 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		014CEA4D0018CE3E11CA2923 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8DD76F8B0486A9BA00D96B5E /* CopyFiles */ = {
@@ -54,6 +30,7 @@
 		08FB7796FE84155DC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		097DBE83FE8419DDC02AAC07 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		2C494A250946E4CB008820F6 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		2C5858E80BAB797E00D46AD8 /* History.rd */ = {isa = PBXFileReference; fileEncoding = 18446744071562067968; lastKnownFileType = text; name = History.rd; path = ../History.rd; sourceTree = "<group>"; };
 		8DD76F8E0486A9BA00D96B5E /* whichapp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = whichapp; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E9D0290929804C91782 /* whichapp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = whichapp.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +51,7 @@
 		08FB7794FE84155DC02AAC07 /* whichapp */ = {
 			isa = PBXGroup;
 			children = (
+				2C5858E80BAB797E00D46AD8 /* History.rd */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6859E9C0290928B04C91782 /* Documentation */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
@@ -128,15 +106,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INSTALL_PATH = "$(HOME)/bin";
-				PREBINDING = NO;
-				PRODUCT_NAME = whichapp;
-			};
 			dependencies = (
 			);
 			name = whichapp;
@@ -151,15 +120,18 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 2C4949AC0946E31C008820F6 /* Build configuration list for PBXProject "whichapp" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				014CEA4C0018CE3E11CA2923 /* Debug */,
-				014CEA4D0018CE3E11CA2923 /* Release */,
-			);
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* whichapp */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8DD76F840486A9BA00D96B5E /* whichapp */,
 			);
@@ -208,7 +180,6 @@
 				INSTALL_PATH = "$(HOME)/bin";
 				PREBINDING = NO;
 				PRODUCT_NAME = whichapp;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -229,13 +200,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = c99;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
 		2C4949AE0946E31C008820F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					x86_64,
+					ppc,
+					i386,
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
@@ -243,6 +221,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = c99;
+				SDKROOT = macosx10.6;
 			};
 			name = Default;
 		};
